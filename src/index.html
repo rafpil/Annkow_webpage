@@ -9,18 +9,19 @@
 </head>
 
 <body>
-    <%= require('html-loader!./sections/hero/hero.html') %>
-        <%= require('html-loader!./sections/up-icon/up-icon.html') %>
-            <main>
-                <article>
-                    <%= require('html-loader!./sections/about/about.html') %>
-                        <%= require('html-loader!./sections/portfolio/portfolio.html') %>
-                            <%= require('html-loader!./sections/work/work.html') %>
-                                <%= require('html-loader!./sections/contact/contact.html') %>
-                                    <%= require('html-loader!./sections/map/map.html') %>
-                </article>
-            </main>
-            <%= require('html-loader!./sections/footer/footer.html') %>
+    <%= require('html-loader!./sections/navbar/navbar.html') %>
+        <%= require('html-loader!./sections/hero/hero.html') %>
+            <%= require('html-loader!./sections/up-icon/up-icon.html') %>
+                <main>
+                    <article>
+                        <%= require('html-loader!./sections/about/about.html') %>
+                            <%= require('html-loader!./sections/portfolio/portfolio.html') %>
+                                <%= require('html-loader!./sections/work/work.html') %>
+                                    <%= require('html-loader!./sections/contact/contact.html') %>
+                                        <%= require('html-loader!./sections/map/map.html') %>
+                    </article>
+                </main>
+                <%= require('html-loader!./sections/footer/footer.html') %>
 </body>
 
 </html>

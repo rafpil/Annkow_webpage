@@ -1,0 +1,166 @@
+#header {
+    font-family: 'Montserrat-Bold';
+    background-color: rgba(0, 0, 0, 0.9);
+    min-height: 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+
+    .li--active {
+        border-bottom: 2px solid $primary;
+    }
+
+    .nav-link--active {
+        color: $primary;
+    }
+
+    & a {
+        color: white;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    #show {
+        display: none;
+    }
+
+    & .navbar {
+        color: $white;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+
+        & .navbar-logo {
+            font-size: 1.25rem;
+            padding-left: 10px;
+            padding-right: 10px;
+            float: left;
+        }
+
+        & ul {
+            display: flex;
+            justify-content: space-evenly;
+
+            & li {
+                white-space: nowrap;
+                display: inline;
+                padding-left: 0.6rem;
+                padding-right: 0.6rem;
+                cursor: pointer;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            .row {
+                flex-direction: column;
+                float: left;
+                text-align: left;
+                padding-left: 10px;
+            }
+
+
+            .navbar-nav {
+                display: none;
+                opacity: 0;
+                @include simple-animate(opacity);
+            }
+
+            .navbar-logo {
+                padding-left: 0;
+            }
+
+            ul li {
+                padding-left: 0;
+                display: block;
+                margin-top: .7rem;
+                margin-bottom: .7rem;
+            }
+        }
+
+        @media (max-width: 991px) {
+
+            #show {
+                display: none;
+
+                .navbar-logo {
+                    padding-left: 0;
+                }
+
+                &:checked {
+
+                    &~div ul.navbar-nav {
+                        display: block;
+                        opacity: 1;
+                    }
+
+                    &~label div span:nth-child(1) {
+                        top: 9px;
+                        width: 0%;
+                        left: 50%;
+                    }
+
+                    &~label div span:nth-child(2) {
+                        transform: rotate(45deg);
+                    }
+
+                    &~label div span:nth-child(3) {
+                        transform: rotate(-45deg);
+                    }
+
+                    &~label div span:nth-child(4) {
+                        top: 9px;
+                        width: 0%;
+                        left: 50%;
+                    }
+                }
+            }
+
+            & .hamburger-menu {
+                width: 3rem;
+                height: 1rem;
+                position: absolute;
+                top: 1.25rem;
+                right: 1rem;
+                transform: rotate(0deg);
+                transition: .2s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    span {
+                        background: $primary;
+                    }
+                }
+
+                & span {
+                    display: block;
+                    position: absolute;
+                    height: 0.3rem;
+                    width: 100%;
+                    background: $white;
+                    border-radius: 9px;
+                    opacity: 1;
+                    left: 0;
+                    transform: rotate(0deg);
+                    transition: .25s ease-in-out;
+
+                    &:nth-child(1) {
+                        top: 0px;
+                    }
+
+                    &:nth-child(2),
+                    &:nth-child(3) {
+                        top: 9px;
+                    }
+
+                    &:nth-child(4) {
+                        top: 18px;
+                    }
+                }
+            }
+        }
+    }
+}

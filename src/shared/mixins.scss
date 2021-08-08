@@ -8,3 +8,9 @@
         padding: 10px;
     }
 }
+
+@mixin simple-animate($property...) {
+    @for $i from 0 to length($property) {
+        transition: $property 15s ease-in-out;
+    }
+}
