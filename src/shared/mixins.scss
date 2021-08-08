@@ -1,0 +1,10 @@
+@mixin borders {
+    border: 1px solid $secondary;
+    border-radius: 4px;
+}
+
+@mixin section-padding {
+    & .row>div {
+        padding: 10px;
+    }
+}

@@ -1,7 +1,7 @@
 @import 'shared/reset.scss';
 @import 'shared/grid.scss';
 @import 'shared/variables.scss';
-
+@import 'shared/mixins.scss';
 
 
 // Global styles
@@ -30,4 +30,22 @@ body {
     line-height: 1.5;
     color: #212529;
     position: relative;
+}
+
+h2 {
+    color: $secondary;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    @include borders
+}
+
+svg {
+    overflow: hidden;
+    vertical-align: middle;
 }
