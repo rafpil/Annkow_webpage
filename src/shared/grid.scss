@@ -1,0 +1,98 @@
+.container,
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+// extra small
+.container {
+    max-width: 95%;
+}
+
+// small
+@media (min-width: 576px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+// medium
+@media (min-width: 768px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+// large
+@media (min-width: 992px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+// extra large
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+// extra small
+@for $i from 1 to 13 {
+    .col-#{$i} {
+        width: $i / 12 * 100%;
+        max-width: $i / 12 * 100%;
+    }
+}
+
+// small
+@media (min-width: 576px) {
+    @for $i from 1 to 13 {
+        .col-sm-#{$i} {
+            width: $i / 12 * 100%;
+            max-width: $i / 12 * 100%;
+        }
+    }
+}
+
+// medium
+@media (min-width: 768px) {
+    @for $i from 1 to 13 {
+        .col-md-#{$i} {
+            width: $i / 12 * 100%;
+            max-width: $i / 12 * 100%;
+        }
+    }
+}
+
+// large
+@media (min-width: 992px) {
+    @for $i from 1 to 13 {
+        .col-lg-#{$i} {
+            width: $i / 12 * 100%;
+            max-width: $i / 12 * 100%;
+        }
+    }
+}
+
+// extra large
+@media (min-width: 1200px) {
+    @for $i from 1 to 13 {
+        .col-xl-#{$i} {
+            width: $i / 12 * 100%;
+            max-width: $i / 12 * 100%;
+        }
+    }
+}
