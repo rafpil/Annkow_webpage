@@ -1,3 +1,33 @@
 @import 'shared/reset.scss';
 @import 'shared/grid.scss';
 @import 'shared/variables.scss';
+
+
+
+// Global styles
+
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: url('./shared/fonts/Montserrat/Montserrat-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url('./shared/fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Montserrat-Medium', sans-serif;
+    line-height: 1.5;
+    color: #212529;
+    position: relative;
+}
