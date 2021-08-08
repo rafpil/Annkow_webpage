@@ -1,0 +1,38 @@
+.upIcon {
+    position: sticky;
+    top: calc(100vh - 3rem - 10px);
+    left: calc(100vw - 5rem);
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 99;
+    width: 1em;
+    height: 1em;
+
+    @media (max-width: 517px) {
+        display: none;
+    }
+
+    & .up-iconBtn {
+        display: flex;
+        width: 3rem;
+        height: 3rem;
+        justify-content: center;
+        align-items: center;
+        background-color: $white;
+        font-size: 3rem;
+        cursor: pointer;
+        color: $secondary;
+        transition: color 0.2s;
+        border-color: $white;
+        border-style: solid;
+        border-radius: 9px;
+        border-width: 2px;
+        margin-bottom: 5px;
+        margin-right: 5px;
+
+        &:hover {
+            color: $primary;
+            border-color: $primary;
+        }
+    }
+}

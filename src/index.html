@@ -9,14 +9,15 @@
 </head>
 
 <body>
-    <main>
-        <article>
-            <%= require('html-loader!./sections/about/about.html') %>
-                <%= require('html-loader!./sections/work/work.html') %>
-                    <%= require('html-loader!./sections/map/map.html') %>
-                        <%= require('html-loader!./sections/footer/footer.html') %>
-        </article>
-    </main>
+    <%= require('html-loader!./sections/up-icon/up-icon.html') %>
+        <main>
+            <article>
+                <%= require('html-loader!./sections/about/about.html') %>
+                    <%= require('html-loader!./sections/work/work.html') %>
+                        <%= require('html-loader!./sections/map/map.html') %>
+                            <%= require('html-loader!./sections/footer/footer.html') %>
+            </article>
+        </main>
 </body>
 
 </html>
