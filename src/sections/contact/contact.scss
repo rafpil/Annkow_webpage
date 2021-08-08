@@ -1,0 +1,47 @@
+.contact {
+    @include section-padding;
+
+    & .card {
+        @include borders;
+        background-color: $white;
+        color: $secondary;
+
+        &__header {
+            font-family: 'Montserrat-Bold';
+            text-align: center;
+            background-color: $secondary;
+            color: $white;
+            padding: 1rem;
+            font-weight: bold;
+        }
+
+        &__body {
+            padding: 1rem .3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+
+
+            &--title {
+                display: flex;
+                margin-bottom: 0.75rem;
+                font-size: 1.25rem;
+                font-weight: 500;
+                align-items: center;
+                flex-direction: row;
+            }
+
+            &--icon {
+                display: flex;
+                width: 2rem;
+                height: 2rem;
+            }
+
+            &--text {
+                margin: 0.4rem;
+            }
+        }
+    }
+}
