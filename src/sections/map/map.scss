@@ -1,0 +1,11 @@
+.map {
+    @include section-padding;
+
+    &__content {
+        position: relative;
+    }
+
+    iframe {
+        @include borders;
+    }
+}
