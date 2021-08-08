@@ -61,6 +61,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: "./src/index.html",
+            favicon: "./src/shared/icons/sewing-machine.svg"
         }),
 
         new CleanWebpackPlugin(),
