@@ -1,0 +1,24 @@
+.footer {
+    & .container-fluid {
+        position: relative;
+        bottom: 0px;
+        background-color: $secondary;
+        color: $white;
+
+        & .row {
+            text-align: center;
+            line-height: 1.5;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            min-height: 2rem;
+
+            & a {
+                color: $white;
+
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
